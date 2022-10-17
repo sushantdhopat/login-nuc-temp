@@ -23,6 +23,7 @@ requests:
           - "Login"
           - "login"
           - "log-in"
+          - "log in"
           - "sign in"
           - "auth"
           - "password"
