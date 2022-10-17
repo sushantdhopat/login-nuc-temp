@@ -25,6 +25,8 @@ requests:
           - "log-in"
           - "log in"
           - "sign in"
+          - "sign_in"
+          - "log_in"
           - "auth"
           - "password"
           - "reset"
