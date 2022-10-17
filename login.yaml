@@ -1,0 +1,38 @@
+id: login-panels
+
+info:
+  name: Login Panels
+  author: sushantdhopat
+  severity: info
+  metadata:
+    verified: true
+    shodan-query: http.html:"TLR-2005KSH"
+  tags: panel,router,telesquare
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}"
+
+    matchers-condition: or
+    matchers:
+      - type: word
+        part: body
+        words:
+          - "signin"
+          - "Login"
+          - "sign in"
+          - "auth"
+          - "password"
+          - "reset"
+          - "password reset"
+          - "forgot"
+          - "forgot password"
+          - "sign-in"
+          - "login.php"
+          - "loginpage.php"
+          - "Login.htm"
+
+      - type: status
+        status:
+          - 200
