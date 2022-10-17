@@ -21,6 +21,8 @@ requests:
         words:
           - "signin"
           - "Login"
+          - "login"
+          - "log-in"
           - "sign in"
           - "auth"
           - "password"
