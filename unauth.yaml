@@ -1,0 +1,29 @@
+id: UAuthdomain
+
+info:
+  name: UAuthdomain
+  author: sushantdhopat
+  severity: info
+  metadata:
+    verified: true
+    shodan-query: http.html:"TLR-2005KSH"
+  tags: panel,router,telesquare
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}"
+
+    matchers-condition: or
+    matchers:
+      - type: word
+        part: body
+        words:
+          - "401"
+          - "403"
+          - "401 Authorization Required"
+          - "forbidden"
+
+      - type: status
+        status:
+          - 200
