@@ -26,4 +26,6 @@ requests:
 
       - type: status
         status:
-          - 200
+          - 401
+          - 403
+      
